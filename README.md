@@ -76,7 +76,7 @@ static uint32_t toPS2Keycode(uint8_t stcode);
 Returns the corresponding PS2 keycode, given an Atari ST code.
 The data can be send to thee PS/2 port with the following procedure :
 ```cpp
-uint32_t ps2code = STKeyboard::toPS2Keycode(stcode)
+uint32_t ps2code = STKeyboard::toPS2Keycode(stcode);
 // get bytes
 uint8_t lo = ps2code & 0xFF;
 uint8_t mi = ps2code & 0xFF00;
@@ -84,5 +84,5 @@ uint8_t hi = ps2code & 0xFF0000;
 // send lo bytes
 if (hi && mi && lo) { write(hi); }
 if (mi && lo)       { write(mi); }
-if (lo)             { write(lo); } else { return -1 }
+if (lo)             { write(lo); } else { return -1; }
 ```
