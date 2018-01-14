@@ -137,7 +137,7 @@ class STKeyboard {
         static bool isMake(uint8_t code);
         static bool isBreak(uint8_t code);
         static uint8_t getKey(uint8_t code);
-        static uint32_t toPS2Keycode(uint8_t code);
+        static uint32_t toPS2Keycode(uint8_t code, bool setone = true);
 
     private:
 
